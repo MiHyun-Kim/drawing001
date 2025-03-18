@@ -43,10 +43,16 @@ var angleDistortion = 0.0;
 
 var counter = 0;
 
+let img;
+
+function preload() {
+  img = loadImage("https://mihyun-kim.github.io/drawing001/text/daughteranddad.jpg"); // Load the image
+}
+
 function setup() {
   // use full screen size
   createCanvas(displayWidth, displayHeight);
-  background(255);
+  background(img);
   cursor(CROSS);
 
   x = mouseX;
