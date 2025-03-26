@@ -2,7 +2,7 @@ let points = []; // Store points where lines will be drawn
 let img;  // Declare an image variable
 
 function setup() {
-  createCanvas(1000, 1000, WEBGL);
+  createCanvas(windowWidth, windowHeight, WEBGL);
   angleMode(DEGREES);
   strokeWeight(1);
   noFill();
