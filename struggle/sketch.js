@@ -15,7 +15,7 @@ function setup() {
   let camX = 0;
   let camY = 0;
   let camZ = -200;  // Camera inside the sphere (negative to look outward)
-  camera(camX, camY, camZ, 0, 0, 0, 1, 1, 0); // Look towards the center of the sphere
+  camera(camX, camY, camZ, 0, 0, 0, 0, 1, 0); // Look towards the center of the sphere
 }
 
 function draw() {
