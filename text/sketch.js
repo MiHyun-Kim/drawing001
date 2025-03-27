@@ -51,7 +51,7 @@ function preload() {
 
 function setup() {
   // use full screen size
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(1000, 800);
   background(img);
   cursor(CROSS);
 
