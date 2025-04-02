@@ -21,7 +21,7 @@ function draw() {
   // Draw the sphere with the image inside
   push();
   texture(img);  // Apply the image as a texture
-  sphere(300);  // Create a sphere with the texture
+  sphere(200);  // Create a sphere with the texture
   pop();
 
   
