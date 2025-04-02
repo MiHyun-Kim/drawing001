@@ -2,7 +2,7 @@ let cubePositions = []; // Store cube positions
 let img;  // Declare an image variable
 
 function setup() {
-  createCanvas(1000, 1000, WEBGL);
+  createCanvas(windowWidth, windowHeight, WEBGL);
   angleMode(DEGREES);
   strokeWeight(2);
   noFill();
@@ -21,7 +21,7 @@ function draw() {
   // Draw the sphere with the image inside
   push();
   texture(img);  // Apply the image as a texture
-  sphere(400);  // Create a sphere with the texture
+  sphere(300);  // Create a sphere with the texture
   pop();
 
   
