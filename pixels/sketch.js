@@ -39,7 +39,7 @@ function draw() {
       fill(255);
     }
 */      
-      stroke(0);
+      noStroke(0);
       rect(column * cellSize, row * cellSize, cellSize, cellSize);
     }
   }
