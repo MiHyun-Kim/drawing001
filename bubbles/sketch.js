@@ -24,7 +24,7 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background('#FDB335');
+  clear();
   noLoop(); // Only redraw when necessary
 }
 
@@ -69,7 +69,7 @@ function mousePressed() {
 }
 
 function redrawScene() {
-  background(255); // Clear canvas
+  clear(); // Clear canvas
   for (let obj of placedImages) {
     image(obj.img, obj.x, obj.y, obj.w, obj.h);
   }
