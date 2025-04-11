@@ -70,7 +70,12 @@ function mousePressed() {
 
 function redrawScene() {
   clear(); // Clear canvas
-  for (let obj of placedImages) {
-    image(obj.img, obj.x, obj.y, obj.w, obj.h);
+   for (let obj of placedImages) {
+     let img = obj.img;
+    let aspectRatio = img.width / img.height;
+    let desiredHeight = 150; // Make this larger or smaller as needed
+    let desiredWidth = desiredHeight * aspectRatio;
+
+    image(img, obj.x, obj.y, desiredWidth, desiredHeight);
   }
 }
