@@ -73,7 +73,7 @@ function redrawScene() {
    for (let obj of placedImages) {
      let img = obj.img;
     let aspectRatio = img.width / img.height;
-    let desiredHeight = 150; // Make this larger or smaller as needed
+    let desiredHeight = 100; // Make this larger or smaller as needed
     let desiredWidth = desiredHeight * aspectRatio;
 
     image(img, obj.x, obj.y, desiredWidth, desiredHeight);
