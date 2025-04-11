@@ -24,7 +24,7 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(0);
+  clear();
   noLoop(); // Only redraw when necessary
 }
 
