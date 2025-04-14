@@ -14,7 +14,7 @@ let images = [];
 let placedImages = [];
 let adding = true;
 let index = 0;
-const maxImages = 50;
+const maxImages = 70;
 
 function preload() {
   for (let url of imageURLs) {
