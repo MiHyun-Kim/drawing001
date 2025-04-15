@@ -8,6 +8,11 @@ let imageURLs = [
   'images/Math.png',
   'images/Python.png',
   'images/ResearchPosition.png',
+  'images/ask_questions.png',
+  'images/be_confident.png',
+  'images/overcome_anxiety.png',
+  'images/data_viz',
+  'images/friendship.png',
 ];
 
 let images = [];
