@@ -11,7 +11,7 @@ let imageURLs = [
   'images/ask_questions.png',
   'images/be_confident.png',
   'images/overcome_anxiety.png',
-  'images/data_viz',
+  'images/data_viz.png',
   'images/friendship.png',
 ];
 
