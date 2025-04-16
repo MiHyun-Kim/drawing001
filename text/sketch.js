@@ -60,7 +60,7 @@ function setup() {
 
   textFont(font);
   textAlign(LEFT);
-  fill('black');
+  fill('#4C71D1');
 }
 
 function draw() {
