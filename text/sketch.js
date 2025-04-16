@@ -46,7 +46,7 @@ var counter = 0;
 let img;
 
 function preload() {
-  img = loadImage("https://mihyun-kim.github.io/drawing001/text/daughteranddad.png"); // Load the image
+  img = loadImage("cleo.png"); // Load the image
 }
 
 function setup() {
