@@ -60,7 +60,7 @@ function setup() {
 
   textFont(font);
   textAlign(LEFT);
-  fill('0');
+  fill('black');
 }
 
 function draw() {
