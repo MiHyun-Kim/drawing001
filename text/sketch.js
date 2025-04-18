@@ -46,7 +46,7 @@ var counter = 0;
 let img;
 
 function preload() {
-  img = loadImage("cleo.png"); // Load the image
+  img = loadImage("cleo_1.png"); // Load the image
 }
 
 function setup() {
