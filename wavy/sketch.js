@@ -15,7 +15,7 @@ function setup() {
   noStroke();
   fill(0);
 
-  slider = createSlider(0, 30, 5, 0.1);
+  slider = createSlider(0, 25, 5, 0.1);
   slider.position(20, height + 10);
   slider.style('width', '200px');
 
