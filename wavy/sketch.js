@@ -18,6 +18,8 @@ function setup() {
   slider = createSlider(0, 25, 5, 0.1);
   slider.position(20, height + 10);
   slider.style('width', '200px');
+  slider.style('background', '#e0e0e0');      // Track color (fallback)
+  slider.style('accent-color', '#7213FD'); 
 
   generatePointsAcrossLines();
 }
