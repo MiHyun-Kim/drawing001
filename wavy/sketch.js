@@ -13,7 +13,7 @@ function setup() {
   textFont(font);
   textSize(fontSize);
   noStroke();
-  fill(0);
+  fill('#E67E81');
 
   slider = createSlider(0, 30, 5, 0.1);
   slider.position(20, height + 10);
@@ -60,7 +60,7 @@ function draw() {
     }
   }
 
-  fill(0);
+  fill('#7213FD');
   textSize(16);
   text("Wave Amount", slider.x * 1.2 + slider.width, slider.y + 10);
 }
