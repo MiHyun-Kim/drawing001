@@ -13,7 +13,7 @@ function setup() {
   textFont(font);
   textSize(fontSize);
   noStroke();
-  fill('#E67E81');
+  fill(0);
 
   slider = createSlider(0, 30, 5, 0.1);
   slider.position(20, height + 10);
@@ -48,7 +48,7 @@ function generatePointsAcrossLines() {
 }
 
 function draw() {
-  background(255);
+  background('#EF9295');
   let t = millis() / 1000;
   let waveAmount = slider.value();
 
