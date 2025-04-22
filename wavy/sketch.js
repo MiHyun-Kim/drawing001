@@ -5,7 +5,7 @@ let pointsArray = [];
 let slider;
 
 function preload() {
-  font = loadFont('https://cdnjs.cloudflare.com/ajax/libs/topcoat/0.8.0/font/SourceCodePro-Regular.otf');
+  font = loadFont('terminal-grotesque-webfont.ttf');
 }
 
 function setup() {
