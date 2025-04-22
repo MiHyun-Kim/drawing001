@@ -1,5 +1,5 @@
 let font;
-let fontSize = 64;
+let fontSize = 100;
 let message = "I told him that I'm struggling to understand. And he said, it's because you're a woman and women don't comprehend quite as fast...And I got really upset and I left.";
 let pointsArray = [];
 let slider;
@@ -27,7 +27,7 @@ function setup() {
 function generatePointsAcrossLines() {
   pointsArray = [];
   let x = 40;
-  let y = 80;
+  let y = 100;
 
   for (let i = 0; i < 1000; i++) { // Large number to fill screen
     let char = message[i % message.length];
