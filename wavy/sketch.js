@@ -9,7 +9,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight - 50);
+  createCanvas(windowWidth, windowHeight);
   textFont(font);
   textSize(fontSize);
   noStroke();
