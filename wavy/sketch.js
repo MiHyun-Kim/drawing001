@@ -65,5 +65,5 @@ function draw() {
 
   fill('#7213FD');
   textSize(16);
-  text("Wave Amount", slider.x * 1.2 + slider.width, slider.y + 10);
+  text("Wave Amount", slider.x * 1.4 + slider.width, slider.y + 15);
 }
