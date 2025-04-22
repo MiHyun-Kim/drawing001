@@ -35,7 +35,7 @@ function generatePointsAcrossLines() {
 
     if (x + charWidth > width - 40) {
       x = 40;
-      y += fontSize * 1.2;
+      y += fontSize * 1.3;
       if (y > height - 40) break;
     }
 
