@@ -20,6 +20,7 @@ function setup() {
   slider.style('width', '200px');
   slider.style('background', '#e0e0e0');      // Track color (fallback)
   slider.style('accent-color', '#7213FD'); 
+  slider.style('z-index', '1000');
 
   generatePointsAcrossLines();
 }
