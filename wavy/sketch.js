@@ -1,6 +1,6 @@
 let font;
 let fontSize = 100;
-let message = "I told him that I'm struggling to understand. And he said, it's because you're a woman and women don't comprehend quite as fast...And I got really upset and I left.";
+let message = "I told him that I'm struggling to understand. And he said, oh, it's because you're a woman and women don't comprehend quite as fast as me...And I got really upset and I left. I even told him that made me upset. I literally walked away from him.";
 let pointsArray = [];
 let slider;
 
@@ -16,10 +16,11 @@ function setup() {
   fill(0);
 
   slider = createSlider(0, 25, 5, 0.1);
-  slider.position(25, height-30);
+  let sliderWidth = 200;
+  slider.position(windowWidth - sliderWidth - 20, height-30);
   slider.style('width', '200px');
   slider.style('background', '#e0e0e0');      // Track color (fallback)
-  slider.style('accent-color', '#7213FD'); 
+  slider.style('accent-color', '#FEACD8'); 
   slider.style('z-index', '1000');
 
   generatePointsAcrossLines();
@@ -51,7 +52,7 @@ function generatePointsAcrossLines() {
 }
 
 function draw() {
-  background('#EF9295');
+  background('#8B40DB');
   let t = millis() / 1000;
   let waveAmount = slider.value();
 
@@ -65,5 +66,5 @@ function draw() {
 
   fill('#7213FD');
   textSize(16);
-  text("Wave Amount", slider.x * 1.4 + slider.width, slider.y + 15);
+  text("Wave Amount", slider.x-120, slider.y + 15);
 }
