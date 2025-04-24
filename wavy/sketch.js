@@ -64,7 +64,7 @@ function draw() {
     }
   }
 
-  fill('#7213FD');
+  fill('#FEACD8');
   textSize(16);
   text("Wave Amount", slider.x-120, slider.y + 15);
 }
