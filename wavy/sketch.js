@@ -65,6 +65,6 @@ function draw() {
   }
 
   fill('#FEACD8');
-  textSize(16);
-  text("Wave Amount", slider.x-120, slider.y + 15);
+  textSize(15);
+  text("wave amount", slider.x-120, slider.y + 15);
 }
