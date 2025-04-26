@@ -52,7 +52,7 @@ function generatePointsAcrossLines() {
 }
 
 function draw() {
-  background('0,0,0,0');
+  background('#8B40DB');
   let t = millis() / 1000;
   let waveAmount = slider.value();
 
