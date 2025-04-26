@@ -21,7 +21,7 @@ function draw() {
   }
 
   // Draw the lines between connected dots
-  stroke(245);
+  stroke('#8B40DB');
   for (let conn of connections) {
     line(conn[0].x, conn[0].y, conn[1].x, conn[1].y);
   }
