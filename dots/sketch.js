@@ -55,7 +55,7 @@ class DotObject {
     this.id = id;
     this.x = random(width);
     this.y = random(height);
-    this.radius = random(4, 6);
+    this.radius = 5;
     this.vx = random(-1, 1);
     this.vy = random(-1, 1);
   }
