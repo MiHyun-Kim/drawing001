@@ -17,7 +17,7 @@ function setup() {
 
   slider = createSlider(0, 25, 5, 0.1);
   let sliderWidth = 200;
-  slider.position(windowWidth - sliderWidth - 20, height-30);
+  slider.position(20, height-30);
   slider.style('width', '200px');
   slider.style('background', '#e0e0e0');      // Track color (fallback)
   slider.style('accent-color', '#FEACD8'); 
