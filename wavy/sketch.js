@@ -17,7 +17,7 @@ function setup() {
 
   slider = createSlider(0, 25, 5, 0.1);
   let sliderWidth = 200;
-  slider.position(190, height-30);
+  slider.position(2200, height-30);
   slider.style('width', '200px');
   slider.style('background', '#e0e0e0');      // Track color (fallback)
   slider.style('accent-color', '#FEACD8'); 
@@ -66,5 +66,5 @@ function draw() {
 
   fill('#FEACD8');
   textSize(15);
-  text("wave amount", slider.x-100, slider.y + 15);
+  text("wave amount", slider.x-80, slider.y + 15);
 }
