@@ -9,7 +9,7 @@ let wordColors = {
   "support": "#FF00FE",        // red
   "computer": "#36FF00",  // green
   "family": "#00FFF8",         // yellow
-  "software+developer": "#8B40DB",     // purple
+  "software+developer": "#7E06FF",     // purple
   "website": "#ED1C24",
   "role models": "#FFF800",
 };
