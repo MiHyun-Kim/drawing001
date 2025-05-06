@@ -1,4 +1,4 @@
-let keywords = ["brothers", "support", "computer", "family", "software+developer", "website", "role models", "→"];
+let keywords = ["brothers", "support", "computer", "family", "software+developer", "website", "role models"];
 let movers = [];
 let numMovers = 25;
 let myFont;
@@ -12,7 +12,6 @@ let wordColors = {
   "software+developer": "#8B40DB",     // purple
   "website": "#ED1C24",
   "role models": "#FFF800",
-  "→": "#3498db",
 };
 
 function preload() {
