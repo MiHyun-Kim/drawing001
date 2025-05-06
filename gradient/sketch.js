@@ -40,14 +40,14 @@ function setup() {
 
 function draw() {
   // Gradient background
-  let fromColor = color('#FEACD8');
-  let toColor = color('#8B40DB');
-  for (let y = 0; y < height; y++) {
-    let inter = map(mouseX, 0, width, 0, 1);
-    let c = lerpColor(fromColor, toColor, inter * y / height);
-    stroke(c);
-    line(0, y, width, y);
-  }
+  let pink = color('#FEACD8');
+  let purple = color('#8B40DB');
+
+  // Interpolate based on horizontal mouse position
+  let amt = constrain(map(mouseX, 0, width, 0, 1), 0, 1);
+  let bgColor = lerpColor(pink, purple, amt);
+
+  background(bgColor);
 
   // Draw moving words with their assigned colors
   for (let mover of movers) {
