@@ -21,7 +21,7 @@ function draw() {
   }
 
   // Draw the lines between connected dots
-  stroke('#8B40DB');
+  stroke('#7C00FF');
   for (let conn of connections) {
     line(conn[0].x, conn[0].y, conn[1].x, conn[1].y);
   }
@@ -70,7 +70,7 @@ class DotObject {
  show() {
   // Draw the dot
   noStroke();
-  fill('#8B40DB');
+  fill('#7C00FF');
   ellipse(this.x, this.y, this.radius * 2);
 
   // Draw the number next to the dot
