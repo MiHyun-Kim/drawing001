@@ -1,17 +1,17 @@
-let keywords = ["brothers", "support", "computer", "family", "software+developer", "website", "role models"];
+let keywords = ["brothers", "support", "computer", "family", "software developer", "web+mobile", "role models"];
 let movers = [];
 let numMovers = 25;
 let myFont;
 
 // Define a color map for specific words
 let wordColors = {
-  "brothers": "#3634FF",     // blue
-  "support": "#FF00FE",        // red
-  "computer": "#36FF00",  // green
-  "family": "#00FFF8",         // yellow
-  "software+developer": "#7E06FF",     // purple
-  "website": "#ED1C24",
-  "role models": "#FFF800",
+  "brothers": "#508EFB",     // blue
+  "support": "#FB33FB",        // red
+  "computer": "#A1B714",  // green
+  "family": "#B0FECB",         // yellow
+  "software developer": "#E56D6C",     // purple
+  "web+mobile": "#19CAD8",
+  "role models": "#FBDDAA",
 };
 
 function preload() {
