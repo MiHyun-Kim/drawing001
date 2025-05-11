@@ -50,7 +50,7 @@ function draw() {
 			g = camera.pixels[i + 1];
 			b = camera.pixels[i + 2];
 			if (r + g + b < thresholdSlider.value()) {
-				 fill(0);//text color
+				 fill('#ed1c24');//text color
 				text(message[messageIndex], x * multiplier, y * multiplier);
 				messageIndex++;
 				messageIndex %= message.length;
