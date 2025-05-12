@@ -31,6 +31,14 @@ class Robot {
 
     rectMode(CENTER);
     ellipseMode(CENTER);
+
+
+    // Set glow effect for the stroke (around shapes)
+		drawingContext.shadowColor = color(this.colors[0]); // Glow color
+		drawingContext.shadowBlur = 30; // How intense the glow is
+		drawingContext.shadowOffsetX = 0; // Shadow offset (no offset)
+		drawingContext.shadowOffsetY = 0; // Shadow offset (no offset)
+    
     stroke(this.colors[0]);
     noFill(); // ensures stroke-only
    
