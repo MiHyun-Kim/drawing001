@@ -112,7 +112,7 @@ function setup() {
 
 function draw() {
   translate(width / 2, height / 2); // Push robot toward left and up
-  scale(5);
+  scale(8);
   translate(-width / 2, -height / 2);
   background('#1DABCD');
 
