@@ -114,7 +114,7 @@ function setup() {
 }
 
 function draw() {
-	translate(width / 4, height / 3);
+	translate(width / 2, height / 2);
 	scale(5);
 	translate(-width / 2, -height / 2);
 	background('#1DABCD');
