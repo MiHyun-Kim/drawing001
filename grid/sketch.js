@@ -8,26 +8,43 @@ const rows = 25;
 const cols = 25; 
 
 function setup() {
-  createCanvas(windowWidth, windowHeight); 
+  createCanvas(windowWidth, windowHeight);
   noFill(); 
-  stroke('#00ED0B'); 
+  stroke('#00ED0B');
 
+  // Create save button
+  let saveBtn = createButton('Save Drawing');
+  saveBtn.position(windowWidth - 260, windowHeight - 60); // position in bottom right
+  saveBtn.style('background-color', '#007BFF'); // blue background
+  saveBtn.style('color', 'white');
+  saveBtn.style('border', 'none');
+  saveBtn.style('padding', '10px 20px');
+  saveBtn.style('font-size', '16px');
+
+  saveBtn.style('cursor', 'pointer');
+  saveBtn.style('position', 'absolute');
+
+  saveBtn.mousePressed(() => {
+    saveCanvas('grid-drawing', 'png');
+  });
+
+  // Initialize column widths and row heights
   for (let j = 0; j < cols; j++) {
-    columnWidths[j] = width / cols; 
+    columnWidths[j] = width / cols;
   }
   for (let i = 0; i < rows; i++) {
-    rowHeights[i] = height / rows; 
+    rowHeights[i] = height / rows;
   }
 
-  // Initialize all cells as unclicked
+  // Initialize clickedCells grid
   for (let i = 0; i < rows; i++) {
     clickedCells[i] = [];
     for (let j = 0; j < cols; j++) {
-      clickedCells[i][j] = false; 
+      clickedCells[i][j] = false;
     }
   }
 
-  // 👇 Add a few pre-filled cells here
+  // Pre-fill a few cells to guide users
   clickedCells[3][4] = true;
   clickedCells[6][7] = true;
   clickedCells[10][12] = true;
