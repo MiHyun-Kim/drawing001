@@ -1,13 +1,3 @@
-// ########################################################## //
-// #                                                        # //
-// #            Test for post processing shaders            # //
-// #                                                        # //
-// ########################################################## //
-// #                                                        # //
-// #                Written by Fabian Kober                 # //
-// #                  fabian-kober@gmx.net                  # //
-// #                                                        # //
-// ########################################################## //
 
 // speed of the wobble
 let speed = 1;
@@ -53,7 +43,7 @@ let frag = 'precision mediump float;'+
 
 function preload() {
     // load the image
-    img = loadImage('alejandro_aspirational-02.png');
+    img = loadImage('alejandro_aspirational-01.png');
 }
 
 function setup() {
