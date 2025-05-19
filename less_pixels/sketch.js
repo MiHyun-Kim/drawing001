@@ -63,7 +63,7 @@ function fillCellUnderMouse() {
 function randomizeBoard() {
   for (let x = 0; x < columnCount; x++) {
     for (let y = 0; y < rowCount; y++) {
-      currentCells[x][y] = (random() < 0.05) ? 1 : 0; // Only ~10% alive
+      currentCells[x][y] = (random() < 0.06) ? 1 : 0; // Only ~10% alive
     }
   }
 }
