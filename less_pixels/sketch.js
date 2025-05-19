@@ -23,6 +23,7 @@ function setup() {
 }
 
 function draw() {
+  background('#9276E4'); // Change this to any color you like
   generate();
   fillCellUnderMouse();
 
@@ -31,9 +32,9 @@ function draw() {
       let cell = currentCells[column][row];
 
       if (cell === 1) {
-        fill('#00ED0B'); // Bright green for alive cells
+        fill('#00ED0B'); // Alive cells: bright green
       } else {
-        fill(255);       // White for dead cells
+        fill('#9276E4'); // Dead cells match background for invisibility
       }
 
       noStroke();
