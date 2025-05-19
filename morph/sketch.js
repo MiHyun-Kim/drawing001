@@ -43,7 +43,7 @@ let frag = 'precision mediump float;'+
 
 function preload() {
     // load the image
-    img = loadImage('alejandro_aspirational-01.png');
+    img = loadImage('alejandro-4.png');
 }
 
 function setup() {
