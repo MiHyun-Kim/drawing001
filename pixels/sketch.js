@@ -15,12 +15,14 @@ function setup() {
     currentCells[column] = [];
     nextCells[column] = [];
     for (let row = 0; row < rowCount; row++) {
-      currentCells[column][row] = 0; // Start with all dead cells
+      currentCells[column][row] = 0;
       nextCells[column][row] = 0;
     }
   }
 
-  noLoop();
+  randomizeBoard(); // <- Add this line to start with some live cells
+
+  loop(); // Optional: start animation immediately
 }
 
 function draw() {
