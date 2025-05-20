@@ -25,7 +25,7 @@ function setup() {
 
 
 function draw() {
-  background('#ED1C24'); 
+  background('#FDB335'); 
   generate();
   fillCellUnderMouse();
 
@@ -34,9 +34,9 @@ function draw() {
       let cell = currentCells[column][row];
 
       if (cell === 1) {
-        fill('#FDB335'); 
+        fill('#ED1C24'); 
       } else {
-        fill('#ED1C24'); // Dead cells match background for invisibility
+        fill('#FDB335'); // Dead cells match background for invisibility
       }
 
       noStroke();
