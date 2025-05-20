@@ -5,22 +5,24 @@ let currentCells = [], nextCells = [];
 function setup() {
   frameRate(3);
   createCanvas(windowWidth, windowHeight);
-  noStroke();
 
   columnCount = floor(width / cellSize);
   rowCount = floor(height / cellSize);
 
-  for (let x = 0; x < columnCount; x++) {
-    currentCells[x] = [];
-    nextCells[x] = [];
-    for (let y = 0; y < rowCount; y++) {
-      currentCells[x][y] = 0;
-      nextCells[x][y] = 0;
+  for (let column = 0; column < columnCount; column++) {
+    currentCells[column] = [];
+    nextCells[column] = [];
+    for (let row = 0; row < rowCount; row++) {
+      currentCells[column][row] = 0;
+      nextCells[column][row] = 0;
     }
   }
 
-  noLoop();
+  randomizeBoard(); // <- Add this line to start with some live cells
+
+  loop(); // Optional: start animation immediately
 }
+
 
 function draw() {
   background('#9276E4'); // Change this to any color you like
