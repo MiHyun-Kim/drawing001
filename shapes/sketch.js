@@ -9,6 +9,10 @@ function setup() {
   noLoop(); // static layout
   rectMode(CENTER);
   angleMode(RADIANS);
+
+  let availableWidth = width - 2 * margin;
+  let availableHeight = height - 2 * margin;
+  
   generateShapes();
 }
 
