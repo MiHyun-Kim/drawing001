@@ -60,7 +60,7 @@ class Letter {
     this.size = random(48, 72);
 
     this.alpha = 255;
-    this.fadeSpeed = random(0.5, 1.5);
+    this.fadeSpeed = random(0.1, 0.7);
     this.floatX = random(-0.3, 0.3);
     this.floatY = random(-0.5, -1.5); // upward drift
   }
