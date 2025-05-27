@@ -51,7 +51,7 @@ function mousePressed() {
 function generateShapes() {
   shapes = [];
 
-  cols = floor((800 - 2 * margin) / cellSize); // fixed grid width
+  cols = floor((1000 - 2 * margin) / cellSize); // fixed grid width
   rows = floor((600 - 2 * margin) / cellSize); // fixed grid height
 
   let gridWidth = cols * cellSize;
