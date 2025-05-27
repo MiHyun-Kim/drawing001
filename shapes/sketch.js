@@ -50,13 +50,21 @@ function mousePressed() {
 
 function generateShapes() {
   shapes = [];
-  cols = floor((width - 2 * margin) / cellSize);
-  rows = floor((height - 2 * margin) / cellSize);
+
+  cols = floor((800 - 2 * margin) / cellSize); // fixed grid width
+  rows = floor((600 - 2 * margin) / cellSize); // fixed grid height
+
+  let gridWidth = cols * cellSize;
+  let gridHeight = rows * cellSize;
+
+  // Center grid in the canvas
+  let offsetX = (width - gridWidth) / 2;
+  let offsetY = (height - gridHeight) / 2;
 
   for (let i = 0; i < cols; i++) {
     for (let j = 0; j < rows; j++) {
-      let x = margin + i * cellSize + cellSize / 2;
-      let y = margin + j * cellSize + cellSize / 2;
+      let x = offsetX + i * cellSize + cellSize / 2;
+      let y = offsetY + j * cellSize + cellSize / 2;
       let maxShapeSize = cellSize - spacing * 2;
 
       shapes.push({
@@ -69,3 +77,4 @@ function generateShapes() {
     }
   }
 }
+
