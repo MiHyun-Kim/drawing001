@@ -10,21 +10,26 @@ function setup() {
   rectMode(CENTER);
   angleMode(RADIANS);
 
-  let availableWidth = width - 2 * margin;
-  let availableHeight = height - 2 * margin;
-  
   generateShapes();
 }
 
 function draw() {
   background('#DE91F9');
+
   for (let s of shapes) {
     push();
     translate(s.x, s.y);
     rotate(s.angle);
+
     let size = s.size;
-    noFill();
-    stroke('#008200');
+
+    if (s.filled) {
+      fill('#008200'); // green fill
+    } else {
+      noFill();
+    }
+
+    stroke('#008200'); // green stroke
     strokeWeight(1.5);
 
     if (s.type === 'rect') {
@@ -51,20 +56,20 @@ function mousePressed() {
 function generateShapes() {
   shapes = [];
 
-  cols = floor((1000 - 2 * margin) / cellSize); // fixed grid width
-  rows = floor((600 - 2 * margin) / cellSize); // fixed grid height
+  // Fixed grid area size (adjust as needed)
+  let gridWidth = 600;
+  let gridHeight = 400;
 
-  let gridWidth = cols * cellSize;
-  let gridHeight = rows * cellSize;
+  cols = floor((1000 - 2 * margin) / cellSize);
+  rows = floor((600 - 2 * margin) / cellSize);
 
-  // Center grid in the canvas
-  let offsetX = (width - gridWidth) / 2;
-  let offsetY = (height - gridHeight) / 2;
+  let offsetX = (width - cols * cellSize) / 2;
+  let offsetY = (height - rows * cellSize) / 2 - 50; // slightly above center
 
   for (let i = 0; i < cols; i++) {
     for (let j = 0; j < rows; j++) {
       let x = offsetX + i * cellSize + cellSize / 2;
-      let y = offsetY + j * cellSize + cellSize / 2 - 50;
+      let y = offsetY + j * cellSize + cellSize / 2;
       let maxShapeSize = cellSize - spacing * 2;
 
       shapes.push({
@@ -72,9 +77,11 @@ function generateShapes() {
         y: y,
         size: random(maxShapeSize * 0.5, maxShapeSize),
         angle: floor(random(4)) * HALF_PI,
-        type: random(['rect', 'circle', 'triangle', 'arc'])
+        type: random(['rect', 'circle', 'triangle', 'arc']),
+        filled: random([true, false]) // randomly filled or outlined
       });
     }
   }
 }
+
 
