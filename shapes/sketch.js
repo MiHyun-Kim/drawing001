@@ -64,7 +64,7 @@ function generateShapes() {
   for (let i = 0; i < cols; i++) {
     for (let j = 0; j < rows; j++) {
       let x = offsetX + i * cellSize + cellSize / 2;
-      let y = offsetY + j * cellSize + cellSize / 2;
+      let y = offsetY + j * cellSize + cellSize / 2 - 50;
       let maxShapeSize = cellSize - spacing * 2;
 
       shapes.push({
