@@ -60,7 +60,7 @@ function generateShapes() {
   rows = floor((gridHeight - 2 * margin) / cellSize);
 
   let offsetX = (width - cols * cellSize) / 2;
-  let offsetY = (height - rows * cellSize) / 2 - 120; // slightly above center
+  let offsetY = (height - rows * cellSize) / 2 - 100; // slightly above center
 
   for (let i = 0; i < cols; i++) {
     for (let j = 0; j < rows; j++) {
