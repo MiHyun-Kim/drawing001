@@ -23,13 +23,9 @@ function draw() {
 
     let size = s.size;
 
-    if (s.filled) {
-      fill('#008200'); // green fill
-    } else {
-      noFill();
-    }
-
-    stroke('#008200'); // green stroke
+    // Fill and stroke for all shapes
+    fill('#008200');         // green fill
+    stroke('#008200');       // green stroke
     strokeWeight(1.5);
 
     if (s.type === 'rect') {
@@ -56,12 +52,12 @@ function mousePressed() {
 function generateShapes() {
   shapes = [];
 
-  // Fixed grid area size (adjust as needed)
+  // Fixed grid area size
   let gridWidth = 600;
   let gridHeight = 400;
 
-  cols = floor((1000 - 2 * margin) / cellSize);
-  rows = floor((600 - 2 * margin) / cellSize);
+  cols = floor((gridWidth - 2 * margin) / cellSize);
+  rows = floor((gridHeight - 2 * margin) / cellSize);
 
   let offsetX = (width - cols * cellSize) / 2;
   let offsetY = (height - rows * cellSize) / 2 - 50; // slightly above center
@@ -77,11 +73,9 @@ function generateShapes() {
         y: y,
         size: random(maxShapeSize * 0.5, maxShapeSize),
         angle: floor(random(4)) * HALF_PI,
-        type: random(['rect', 'circle', 'triangle', 'arc']),
-        filled: random([true, false]) // randomly filled or outlined
+        type: random(['rect', 'circle', 'triangle', 'arc'])
       });
     }
   }
 }
-
 
