@@ -53,8 +53,8 @@ function generateShapes() {
   shapes = [];
 
   // Fixed grid area size
-  let gridWidth = 1000;
-  let gridHeight = 600;
+  let gridWidth = 900;
+  let gridHeight = 500;
 
   cols = floor((gridWidth - 2 * margin) / cellSize);
   rows = floor((gridHeight - 2 * margin) / cellSize);
