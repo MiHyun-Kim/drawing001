@@ -1,12 +1,23 @@
+let bgColors = ['#F7C6E1', '#CEE244', '#FFBABC'];
+let cellColors = ['#ED1C24', '#8B40DB', '#008200'];
+
+let selectedBgColor;
+let selectedCellColor;
+
 let cellSize = 20;
 let columnCount;
 let rowCount;
 let currentCells = [];
 let nextCells = [];
 
+
 function setup() {
   frameRate(3);
   createCanvas(windowWidth, windowHeight);
+
+  // Randomly select background and cell colors
+  selectedBgColor = random(bgColors);
+  selectedCellColor = random(cellColors);
 
   columnCount = floor(width / cellSize);
   rowCount = floor(height / cellSize);
@@ -20,29 +31,42 @@ function setup() {
     }
   }
 
-  randomizeBoard(); // <- Add this line to start with some live cells
-
-  loop(); // Optional: start animation immediately
+  background(selectedBgColor); // Set initial background color
+  randomizeBoard();
+  loop();
 }
 
+
 function draw() {
+  background(selectedBgColor); // Set background each frame (optional)
   generate();
-  fillCellUnderMouse(); // <- Fill the cell under mouse each frame
+  fillCellUnderMouse();
 
   for (let column = 0; column < columnCount; column++) {
     for (let row = 0; row < rowCount; row++) {
       let cell = currentCells[column][row];
-    
-      fill((1 - cell) * 255); //black
- /*     
+
       if (cell === 1) {
-      fill(random(255), random(255), random(255));
-    } else {
-      fill(255);
-    }
-*/      
-      noStroke(0);
+        fill(selectedCellColor);
+      } else {
+        fill(selectedBgColor);
+      }
+
+      noStroke();
       rect(column * cellSize, row * cellSize, cellSize, cellSize);
+    }
+  }
+}
+
+function drawDottedBackground() {
+  stroke(200); // Light gray color for dots
+  strokeWeight(2); // Thin lines for dots
+  for (let column = 0; column < columnCount; column++) {
+    for (let row = 0; row < rowCount; row++) {
+      let x = column * cellSize + cellSize / 2;
+      let y = row * cellSize + cellSize / 2;
+
+      point(x, y); // Draw the dot instead of a line
     }
   }
 }
