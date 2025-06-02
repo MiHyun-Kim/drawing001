@@ -22,10 +22,6 @@ function draw() {
 }
 
 function mouseClicked() {
-  if (!fullscreen()) {
-    fullscreen(true); // toggle fullscreen on first click
-    return;
-  }
   generateNewShape();
   redraw();
 }
