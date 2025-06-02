@@ -43,7 +43,7 @@ function generateNewShape() {
   }
 
   // Generate random points
-  let numPoints = floor(random(3, 7));
+  let numPoints = floor(random(6, 12));
   points = [];
   for (let i = 0; i < numPoints; i++) {
     points.push({
