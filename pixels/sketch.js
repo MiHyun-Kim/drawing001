@@ -1,4 +1,4 @@
-let bgColors = ['#F7C6E1', '#CEE244', '#FFBABC'];
+let bgColors = ['#DEFE10', '#00ED0B', '#FEACD8'];
 let cellColors = ['#ED1C24', '#8B40DB', '#008200'];
 
 let selectedBgColor;
