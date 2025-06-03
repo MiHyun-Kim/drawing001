@@ -17,7 +17,7 @@ function setup() {
 }
 
 function draw() {
-  background('#DE91F9');
+   clear(); 
   drawGrid();
 }
 
