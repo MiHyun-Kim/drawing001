@@ -1,17 +1,17 @@
 
-// speed of the wobble
+
 let speed = 1;
 
-// tiling of the wobble
+
 let tiling = 10;
 
-// stength of the wobble
+
 let strength = 0;
 
-// the shader
+
 let sh;
 
-// an image
+
 let img;
 
 let vert = 'attribute vec4 aPosition;'+
@@ -42,7 +42,7 @@ let frag = 'precision mediump float;'+
 '}'
 
 function preload() {
-    // load the image
+  
     img = loadImage('alejandro-4.png');
 }
 
@@ -53,20 +53,20 @@ function setup() {
 }
 
 function draw() {
-    clear(); // Clear the frame each time
+    clear(); 
   
   let currentStrength, currentTiling;
 
-  // Apply wobble only while mouse is pressed or over the canvas
+
   if (mouseIsPressed && mouseX >= 0 && mouseX <= width && mouseY >= 0 && mouseY <= height) {
     currentStrength = strength + mouseX * 0.01;
     currentTiling = tiling + mouseY * 0.01;
   } else {
-    currentStrength = 0; // reset to original image
-    currentTiling = tiling; // or reset to a default like 10
+    currentStrength = 0; 
+    currentTiling = tiling; 
   }
 
-  // set uniforms
+
   sh.setUniform("uSampler", img);
   sh.setUniform("u_time", millis() / 1000);
   sh.setUniform("u_speed", speed);
