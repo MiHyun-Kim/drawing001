@@ -7,15 +7,15 @@ function setup() {
 }
 
 function draw() {
-  // Create a random shade around #ED1C24
-  let r = random(220, 255);  // Red around 237
-  let g = random(10, 40);    // Green around 28
-  let b = random(20, 50);    // Blue around 36
+ 
+  let r = random(220, 255);  
+  let g = random(10, 40);    
+  let b = random(20, 50);   
   
 
-  stroke(r, g, b, 90);     // Stroke uses random red shade
-  noFill();                // No fill for outlined look (optional: or use fill + stroke)
+  stroke(r, g, b, 90);     
+  noFill();                
 
-  // Draw ellipse with size based on mouse movement
+
   ellipse(mouseX, mouseY, abs(mouseX - pmouseX) * 4, abs(mouseY - pmouseY) * 4);
 }
