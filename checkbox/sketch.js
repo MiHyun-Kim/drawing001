@@ -7,7 +7,7 @@ let boxHolder;
 let boxSize = 20;
 
 function setup() {
-  document.body.style.backgroundColor = '#FEACD8'; // light gray, for example
+  document.body.style.backgroundColor = '#FEACD8'; 
 
   noCanvas();
   boxHolder = createDiv('');
@@ -52,7 +52,7 @@ clearButton.style('cursor', 'pointer');
 
 }
 
-// Recalculate layout on window resize
+
 function windowResized() {
   boxHolder.style('width', windowWidth + 'px');
   boxHolder.style('height', windowHeight + 'px');
