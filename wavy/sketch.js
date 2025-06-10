@@ -19,7 +19,7 @@ function setup() {
   let sliderWidth = 200;
   slider.position(170, height-30);
   slider.style('width', '200px');
-  slider.style('background', '#e0e0e0');      // Track color (fallback)
+  slider.style('background', '#e0e0e0');    
   slider.style('accent-color', '#FEACD8'); 
   slider.style('z-index', '1000');
 
@@ -31,7 +31,7 @@ function generatePointsAcrossLines() {
   let x = 40;
   let y = 100;
 
-  for (let i = 0; i < 1000; i++) { // Large number to fill screen
+  for (let i = 0; i < 1000; i++) { 
     let char = message[i % message.length];
     let charWidth = textWidth(char);
 
