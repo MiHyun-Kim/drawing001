@@ -7,7 +7,7 @@ let cnv;
 class Robot {
   constructor(args) {
     let def = {
-      p: createVector(width / 3, height / 2), // moved slightly left
+      p: createVector(width / 3, height / 2), 
       v: createVector(0, 0),
       a: createVector(0, 0),
       randomId: random(500),
@@ -33,34 +33,29 @@ class Robot {
     rectMode(CENTER);
     ellipseMode(CENTER);
     
-    // Set glow effect for the stroke (around shapes)
-		drawingContext.shadowColor = color(this.colors[0]); // Glow color
-		drawingContext.shadowBlur = 30; // How intense the glow is
-		drawingContext.shadowOffsetX = 0; // Shadow offset (no offset)
-		drawingContext.shadowOffsetY = 0; // Shadow offset (no offset)
+  
+		drawingContext.shadowColor = color(this.colors[0]); 
+		drawingContext.shadowBlur = 30; 
+		drawingContext.shadowOffsetX = 0; 
+		drawingContext.shadowOffsetY = 0; 
 
     
     stroke(this.colors[0]);
-    noFill(); // ensures stroke-only
+    noFill(); 
    
     strokeWeight(this.strokeWeight / 2);
 
-    // Head
-    //rect(0, 0, this.size.x, this.size.y, this.corner);
-
-    // Eyes
- // Draw left eye with a different size
     stroke('#DEFE10');
     strokeWeight(this.strokeWeight);
     circle(-25, 0, this.eyeSizesLeft + sin(frameCount / 50 + mouseY / 100) * 2);
 
-    // Draw right eye with a different size
+  
     stroke('#DEFE10');
     strokeWeight(this.strokeWeight / 3);
     circle(25, 0, this.eyeSizesRight + sin(frameCount / 50 + mouseY / 100) * 2);
 
 
-    // Eyebrows
+
 push();
 rotate(sin(frameCount / 30) / 6);
 rect(-25, -25 + sin(frameCount / 50 + this.p.y - mouseX / 20) * 5, this.eyeSizesLeft * 1.5, 6); // Use eyeSizesLeft directly
@@ -70,13 +65,11 @@ push();
 rotate(sin(frameCount / 20 + 1) / 5);
 rect(25, -25 + sin(frameCount / 20 + mouseY / 25 + this.p.y) * 5, this.eyeSizesRight * 1.5, 6); // Use eyeSizesRight directly
 pop();
-    // Antenna
+
     rect(0, -this.size.y / 2 + sin(frameCount / 20 + 0.5) * 5, this.antennaSize.x, this.antennaSize.y);
 
-    // Nose
     rect(0, this.size.y / 8 + sin(frameCount / 20) * 5, 10, 20);
 
-    // Mouth
     push();
     rotate(sin(frameCount / 10 + mouseX / 20 + mouseY / 20) / 5);
     rect(0, this.size.y / 2, this.size.x / 2, 5, 30);
@@ -86,7 +79,6 @@ pop();
   }
 
   update() {
-    // Not used
   }
 }
 
@@ -107,11 +99,11 @@ function setup() {
   }
   overAllTexture.updatePixels();
 
-  addRobot(width / 2, height / 2); // Add a robot
+  addRobot(width / 2, height / 2); 
 }
 
 function draw() {
-  translate(width / 2, height / 2); // Push robot toward left and up
+  translate(width / 2, height / 2); 
   scale(8);
   translate(-width / 2, -height / 2);
   background('#1DABCD');
