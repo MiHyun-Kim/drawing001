@@ -5,12 +5,12 @@ let wordsEnglish = ['I','came','here','to the US', 'study','my','dream','from Ch
 let words1 = [];
 let words2 = [];
 
-let drawingPoints = []; // Array of strokes (each is an array of points)
+let drawingPoints = []; 
 let isDrawing = false;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  //background('#9276E4');
+
   textSize(16);
   textFont('sans-serif');
 
@@ -23,7 +23,7 @@ function setup() {
 function draw() {
   background('#9276E4');
 
-  // Draw animated words
+
   for (let w of words1) {
     w.move();
     w.show();
@@ -34,7 +34,7 @@ function draw() {
     w.show();
   }
 
-  // Periodically add more words
+ 
   if (frameCount % 60 == 0 && words2.length < 2000) {
     for (let i = 0; i < wordsEnglish.length; i++) {
       let word = new Word(wordsEnglish[i], random(0, width), random(0, height), 0);
@@ -42,7 +42,7 @@ function draw() {
     }
   }
 
-  // Draw freehand strokes
+
   noFill();
   stroke('#ED1C24');
   strokeWeight(2);
@@ -57,7 +57,7 @@ function draw() {
 
 function mousePressed() {
   isDrawing = true;
-  drawingPoints.push([]); // Start a new stroke
+  drawingPoints.push([]); 
 }
 
 function mouseReleased() {
