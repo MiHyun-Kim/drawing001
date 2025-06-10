@@ -15,12 +15,12 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
   textAlign(CENTER, CENTER);
-   // no automatic redraw — static background
+  
 }
 
 function draw() {
   background("#008200");
-  // Don't clear the canvas — just update and draw letters
+ 
   for (let i = letters.length - 1; i >= 0; i--) {
     letters[i].update();
     letters[i].display();
@@ -38,7 +38,7 @@ function mouseDragged() {
 }
 
 function releaseLetters() {
-  // Only 1 letter per drag step
+  
   let char = message.charAt(currentIndex);
   currentIndex = (currentIndex + 1) % message.length;
 
@@ -62,7 +62,7 @@ class Letter {
     this.alpha = 255;
     this.fadeSpeed = random(0.1, 0.7);
     this.floatX = random(-0.3, 0.3);
-    this.floatY = random(-0.5, -1.5); // upward drift
+    this.floatY = random(-0.5, -1.5); 
   }
 
   update() {
@@ -72,7 +72,7 @@ class Letter {
   }
 
   display() {
-    fill(222, 145, 249, this.alpha);  // RGB of #DE91F9 + fading alpha
+    fill(222, 145, 249, this.alpha);  
 
     textFont(this.font);
     textSize(this.size);
