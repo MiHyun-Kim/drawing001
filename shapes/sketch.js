@@ -2,11 +2,11 @@ let shapes = [];
 let cols, rows;
 let cellSize = 60;
 let margin = 40;
-let spacing = 10; // space between shapes and cell edges
+let spacing = 10; 
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  noLoop(); // static layout
+  noLoop(); 
   rectMode(CENTER);
   angleMode(RADIANS);
 
@@ -23,9 +23,8 @@ function draw() {
 
     let size = s.size;
 
-    // Fill and stroke for all shapes
-    fill('#008200');         // green fill
-    stroke('#008200');       // green stroke
+    fill('#008200');        
+    stroke('#008200');      
     strokeWeight(1.5);
 
     if (s.type === 'rect') {
@@ -52,7 +51,6 @@ function mousePressed() {
 function generateShapes() {
   shapes = [];
 
-  // Fixed grid area size
   let gridWidth = 900;
   let gridHeight = 500;
 
@@ -60,7 +58,7 @@ function generateShapes() {
   rows = floor((gridHeight - 2 * margin) / cellSize);
 
   let offsetX = (width - cols * cellSize) / 2;
-  let offsetY = (height - rows * cellSize) / 2 - 70; // slightly above center
+  let offsetY = (height - rows * cellSize) / 2 - 70; 
 
   for (let i = 0; i < cols; i++) {
     for (let j = 0; j < rows; j++) {
