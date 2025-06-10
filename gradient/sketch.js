@@ -3,19 +3,19 @@ let movers = [];
 let numMovers = 25;
 let myFont;
 
-// Define a color map for specific words
+
 let wordColors = {
-  "brothers": "#508EFB",     // blue
-  "support": "#FB33FB",        // red
-  "computer": "#A1B714",  // green
-  "family": "#B0FECB",         // yellow
-  "software developer": "#E56D6C",     // purple
+  "brothers": "#508EFB",    
+  "support": "#FB33FB",      
+  "computer": "#A1B714",  
+  "family": "#B0FECB",        
+  "software developer": "#E56D6C",    
   "web+mobile": "#19CAD8",
   "role models": "#FBDDAA",
 };
 
 function preload() {
-  myFont = loadFont('terminal-grotesque.ttf'); // Replace with your font
+  myFont = loadFont('terminal-grotesque.ttf'); 
 }
 
 function setup() {
@@ -33,13 +33,13 @@ function setup() {
       y: random(height),
       vx: random(-0.8, 0.8),
       vy: random(-0.8, 0.8),
-      col: color(wordColors[word]) // Assign color from the map
+      col: color(wordColors[word]) 
     });
   }
 }
 
 function draw() {
-  // Gradient background
+  
   let fromColor = color('#FEACD8');
   let toColor = color('#8B40DB');
   for (let y = 0; y < height; y++) {
@@ -49,11 +49,11 @@ function draw() {
     line(0, y, width, y);
   }
 
-  // Draw moving words with their assigned colors
+ 
   for (let mover of movers) {
-    noFill();                      // No interior fill
-  stroke(mover.col);            // Stroke is the assigned color
-  strokeWeight(1.5);            // Optional: make it slightly thicker
+    noFill();                     
+  stroke(mover.col);            
+  strokeWeight(1.5);           
   text(mover.word, mover.x, mover.y);
 
     mover.x += mover.vx;
