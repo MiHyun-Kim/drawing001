@@ -25,7 +25,7 @@ function setup() {
 
 
 function draw() {
-  background('#F7C6E1'); // Change this to any color you like
+  background('#F7C6E1'); 
   generate();
   fillCellUnderMouse();
 
@@ -34,9 +34,9 @@ function draw() {
       let cell = currentCells[column][row];
 
       if (cell === 1) {
-        fill('#ED1C24'); // Alive cells: bright green
+        fill('#ED1C24'); 
       } else {
-        fill('#F7C6E1'); // Dead cells match background for invisibility
+        fill('#F7C6E1'); 
       }
 
       noStroke();
@@ -65,7 +65,7 @@ function fillCellUnderMouse() {
 function randomizeBoard() {
   for (let x = 0; x < columnCount; x++) {
     for (let y = 0; y < rowCount; y++) {
-      currentCells[x][y] = (random() < 0.05) ? 1 : 0; // Only ~10% alive
+      currentCells[x][y] = (random() < 0.05) ? 1 : 0; 
     }
   }
 }
@@ -88,5 +88,5 @@ function generate() {
     }
   }
 
-  [currentCells, nextCells] = [nextCells, currentCells]; // Swap arrays
+  [currentCells, nextCells] = [nextCells, currentCells]; 
 }
