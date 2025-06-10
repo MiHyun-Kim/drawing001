@@ -30,17 +30,17 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   clear();
-  noLoop(); // Only redraw when necessary
+  noLoop(); 
 }
 
 function draw() {
-  // Only updated via redrawScene()
+ 
 }
 
 function mousePressed() {
   if (adding) {
     if (placedImages.length < maxImages) {
-      let img = images[index % images.length]; // Loop through image list
+      let img = images[index % images.length]; 
       let scale = 150 / img.width;
       let w = img.width * scale;
       let h = img.height * scale;
@@ -78,7 +78,7 @@ function redrawScene() {
    for (let obj of placedImages) {
      let img = obj.img;
     let aspectRatio = img.width / img.height;
-    let desiredHeight = 100; // Make this larger or smaller as needed
+    let desiredHeight = 100; 
     let desiredWidth = desiredHeight * aspectRatio;
 
     image(img, obj.x, obj.y, desiredWidth, desiredHeight);
