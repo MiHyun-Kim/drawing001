@@ -13,7 +13,7 @@ let messageIndex = 0;
 let myFont;
 
 function preload() {
-  // Load your font file (adjust the path if needed)
+
   myFont = loadFont('Velvelyne-Regular.ttf');
 }
 
@@ -23,14 +23,14 @@ function setup() {
 	camera.size(camWidth, camHeight);
 	camera.hide();
 
-	//halfway point for colors
+	
 	createCanvas(windowWidth, windowHeight);
   
 	multiplier = width / camWidth;
 	noStroke();
 	thresholdSlider = createSlider(0, 765, threshold);
 	thresholdSlider.position((width / 2) - (thresholdSlider.width / 2), height - 40);
-	//use a monospace font
+	
 	textFont(myFont);
 	textSize(sampleSize * multiplier);
 	print(message);
@@ -42,7 +42,7 @@ function draw() {
 	messageIndex = 0;
 	background(206,226,68);
 	camera.loadPixels();
-	//create a grid of nested circles
+	
 	for (let y = 0; y < camera.height; y += sampleSize) {
 		for (let x = 0; x < camera.width; x += sampleSize) {
 			i = ((y * camera.width) + x) * 4;
@@ -50,7 +50,7 @@ function draw() {
 			g = camera.pixels[i + 1];
 			b = camera.pixels[i + 2];
 			if (r + g + b < thresholdSlider.value()) {
-				 fill('#ed1c24');//text color
+				 fill('#ed1c24');
 				text(message[messageIndex], x * multiplier, y * multiplier);
 				messageIndex++;
 				messageIndex %= message.length;
