@@ -12,10 +12,10 @@ function setup() {
   noFill(); 
   stroke('#00ED0B');
 
-  // Create save button
+ 
   let saveBtn = createButton('Save Drawing');
-  saveBtn.position(windowWidth - 260, windowHeight - 60); // position in bottom right
-  saveBtn.style('background-color', '#007BFF'); // blue background
+  saveBtn.position(windowWidth - 260, windowHeight - 60); 
+  saveBtn.style('background-color', '#007BFF'); 
   saveBtn.style('color', 'white');
   saveBtn.style('border', 'none');
   saveBtn.style('padding', '10px 20px');
@@ -28,7 +28,6 @@ function setup() {
     saveCanvas('grid-drawing', 'png');
   });
 
-  // Initialize column widths and row heights
   for (let j = 0; j < cols; j++) {
     columnWidths[j] = width / cols;
   }
@@ -36,7 +35,6 @@ function setup() {
     rowHeights[i] = height / rows;
   }
 
-  // Initialize clickedCells grid
   for (let i = 0; i < rows; i++) {
     clickedCells[i] = [];
     for (let j = 0; j < cols; j++) {
@@ -44,7 +42,7 @@ function setup() {
     }
   }
 
-  // Pre-fill a few cells to guide users
+
   clickedCells[3][4] = true;
   clickedCells[6][7] = true;
   clickedCells[10][12] = true;
