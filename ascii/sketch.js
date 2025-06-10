@@ -33,7 +33,7 @@ function windowResized() {
 }
 
 function generateNewShape() {
-  // Create blank grid
+
   grid = [];
   for (let y = 0; y < rows; y++) {
     grid[y] = [];
@@ -42,7 +42,7 @@ function generateNewShape() {
     }
   }
 
-  // Generate random points
+
   let numPoints = floor(random(6, 12));
   points = [];
   for (let i = 0; i < numPoints; i++) {
@@ -52,12 +52,12 @@ function generateNewShape() {
     });
   }
 
-  // Mark dots
+
   for (let pt of points) {
     grid[pt.y][pt.x] = 'o';
   }
 
-  // Connect in a random shape pattern
+
   let mode = floor(random(3));
   if (mode === 0) {
     for (let i = 0; i < points.length - 1; i++) {
@@ -75,7 +75,7 @@ function generateNewShape() {
     }
   }
 
-  // Random placement on screen (within bounds)
+
   offsetX = floor(random(0, max(0, windowWidth - cols * cellW)));
   offsetY = floor(random(0, max(0, windowHeight - rows * cellH)));
 }
