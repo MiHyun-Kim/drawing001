@@ -38,9 +38,9 @@ function setup() {
 }
 
 function draw() {
-  // Mouse-responsive dynamics
-  let radiusFactor = map(mouseX, 0, width, 0.5, 7); // horizontal movement affects size
-  let colorFactor = map(mouseY, 0, height, -50, 50); // vertical movement affects color tint
+
+  let radiusFactor = map(mouseX, 0, width, 0.5, 7); 
+  let colorFactor = map(mouseY, 0, height, -50, 50); 
 
   let growCycle = frameCount % slow;
   let spawnCycle = frameCount % (slow * spwanRatio);
@@ -50,15 +50,14 @@ if (spawnCycle === 1) {
   for (let p of points) {
     let r = baseRadius * radiusFactor;
 
-    // Colors
-    let lightGreen = color(0, 237, 11);  // #00ED0B
-    let darkGreen = color(0, 130, 0);    // #008200
 
-    // Map mouseX (horizontal mouse position) from 0 to 1
+    let lightGreen = color(0, 237, 11);  
+    let darkGreen = color(0, 130, 0);    
+
+   
     let t = map(mouseX, 0, width, 0, 1);
     t = constrain(t, 0, 1);
 
-    // Interpolate color based on mouseX position
     let colObj = lerpColor(lightGreen, darkGreen, t);
     let col = [red(colObj), green(colObj), blue(colObj)];
     
@@ -134,15 +133,15 @@ function updateText() {
     if (p.y > ymax) ymax = p.y;
   }
 
-  // Width and height of text bounding box
+ 
   let boxWidth = xmax - xmin;
   let boxHeight = ymax - ymin;
 
-  // Absolute center of text bounding box
+
   let centerX = xmin + boxWidth / 2;
   let centerY = ymin + boxHeight / 2;
 
-  // Offset needed to center text on canvas
+
   offsetX = width / 2 - centerX;
   offsetY = height / 2 - centerY;
 }
