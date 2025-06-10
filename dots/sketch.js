@@ -6,7 +6,7 @@ let lastConnectedDot = null;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   for (let i = 0; i < 30; i++) {
-  dots.push(new DotObject(i + 1)); // start counting from 1
+  dots.push(new DotObject(i + 1)); 
 }
 }
 
@@ -15,12 +15,12 @@ function draw() {
 
   for (let dot of dots) {
     if (isDotConnected(dot)) {
-      dot.update();  // Only move connected dots
+      dot.update();  
     }
     dot.show();
   }
 
-  // Draw the lines between connected dots
+  
   stroke('#7C00FF');
   for (let conn of connections) {
     line(conn[0].x, conn[0].y, conn[1].x, conn[1].y);
@@ -30,10 +30,10 @@ function mousePressed() {
   for (let dot of dots) {
     if (dist(mouseX, mouseY, dot.x, dot.y) < 10) {
       if (lastConnectedDot === null) {
-        lastConnectedDot = dot;  // Start the chain
+        lastConnectedDot = dot;  
       } else if (lastConnectedDot !== dot) {
         connections.push([lastConnectedDot, dot]);
-        lastConnectedDot = dot;  // Continue the chain
+        lastConnectedDot = dot;  
       }
       break;
     }
@@ -49,7 +49,7 @@ function isDotConnected(dot) {
   return false;
 }
 
-// DotObject Class
+
 class DotObject {
   constructor(id) {
     this.id = id;
@@ -68,12 +68,12 @@ class DotObject {
   }
 
  show() {
-  // Draw the dot
+
   noStroke();
   fill('#7C00FF');
   ellipse(this.x, this.y, this.radius * 2);
 
-  // Draw the number next to the dot
+
   fill('#8B40DB');
   textAlign(LEFT, CENTER);
   textSize(12);
