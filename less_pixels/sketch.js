@@ -1,4 +1,4 @@
-let cellSize = 20; // Increased from 20 to reduce pixel count (fewer cells)
+let cellSize = 20; 
 let columnCount, rowCount;
 let currentCells = [], nextCells = [];
 
@@ -18,14 +18,14 @@ function setup() {
     }
   }
 
-  randomizeBoard(); // <- Add this line to start with some live cells
+  randomizeBoard(); 
 
-  loop(); // Optional: start animation immediately
+  loop(); 
 }
 
 
 function draw() {
-  background('#9276E4'); // Change this to any color you like
+  background('#9276E4'); 
   generate();
   fillCellUnderMouse();
 
@@ -34,9 +34,9 @@ function draw() {
       let cell = currentCells[column][row];
 
       if (cell === 1) {
-        fill('#00ED0B'); // Alive cells: bright green
+        fill('#00ED0B'); 
       } else {
-        fill('#9276E4'); // Dead cells match background for invisibility
+        fill('#9276E4'); 
       }
 
       noStroke();
@@ -65,7 +65,7 @@ function fillCellUnderMouse() {
 function randomizeBoard() {
   for (let x = 0; x < columnCount; x++) {
     for (let y = 0; y < rowCount; y++) {
-      currentCells[x][y] = (random() < 0.06) ? 1 : 0; // Only ~10% alive
+      currentCells[x][y] = (random() < 0.06) ? 1 : 0; 
     }
   }
 }
@@ -88,5 +88,5 @@ function generate() {
     }
   }
 
-  [currentCells, nextCells] = [nextCells, currentCells]; // Swap arrays
+  [currentCells, nextCells] = [nextCells, currentCells]; 
 }
