@@ -15,7 +15,6 @@ function setup() {
   frameRate(3);
   createCanvas(windowWidth, windowHeight);
 
-  // Randomly select background and cell colors
   selectedBgColor = random(bgColors);
   selectedCellColor = random(cellColors);
 
@@ -31,14 +30,14 @@ function setup() {
     }
   }
 
-  background(selectedBgColor); // Set initial background color
+  background(selectedBgColor); 
   randomizeBoard();
   loop();
 }
 
 
 function draw() {
-  background(selectedBgColor); // Set background each frame (optional)
+  background(selectedBgColor); 
   generate();
   fillCellUnderMouse();
 
@@ -59,14 +58,14 @@ function draw() {
 }
 
 function drawDottedBackground() {
-  stroke(200); // Light gray color for dots
-  strokeWeight(2); // Thin lines for dots
+  stroke(200); 
+  strokeWeight(2); 
   for (let column = 0; column < columnCount; column++) {
     for (let row = 0; row < rowCount; row++) {
       let x = column * cellSize + cellSize / 2;
       let y = row * cellSize + cellSize / 2;
 
-      point(x, y); // Draw the dot instead of a line
+      point(x, y); 
     }
   }
 }
@@ -76,12 +75,12 @@ function mousePressed() {
   loop();
 }
 
-// When the mouse moves, trigger a re-draw
+
 function mouseMoved() {
   redraw();
 }
 
-// Set the cell under the mouse to alive
+
 function fillCellUnderMouse() {
   let col = floor(mouseX / cellSize);
   let row = floor(mouseY / cellSize);
