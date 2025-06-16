@@ -1,6 +1,6 @@
 'use strict';
 
-let emojiList = ["✨", "✌🏾", "🤖", "🎈", "💫", "🔥", "🌀", "🌟"];
+let emojiList = ["✨", "✌🏾", "🤖", "🎈", "👧🏽", "🔥", "🌀", "🌟"];
 let fontSizeMin = 16;
 let angleDistortion = 0.2;
 let trail = [];
