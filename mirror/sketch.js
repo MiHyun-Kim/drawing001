@@ -29,7 +29,7 @@ function setup() {
 	multiplier = width / camWidth;
 	noStroke();
 	thresholdSlider = createSlider(0, 765, threshold);
-	thresholdSlider.position((width / 2) - (thresholdSlider.width / 2), height - 40);
+	thresholdSlider.position((width / 2) - (thresholdSlider.width / 2), height - 70);
 	
 	textFont(myFont);
 	textSize(sampleSize * multiplier);
