@@ -10,7 +10,7 @@ function setup() {
   clear(); 
   textAlign(CENTER, CENTER);
   textFont('Arial');
-  noCursor();
+ 
 }
 
 function draw() {
