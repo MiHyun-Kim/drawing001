@@ -14,7 +14,7 @@ function setup() {
 
  
   let saveBtn = createButton('Save Drawing');
-  saveBtn.position(windowWidth - 260, windowHeight - 60); 
+  saveBtn.position(windowWidth / 2, windowHeight - 60); 
   saveBtn.style('background-color', '#007BFF'); 
   saveBtn.style('color', 'white');
   saveBtn.style('border', 'none');
