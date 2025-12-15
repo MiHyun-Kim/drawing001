@@ -25,7 +25,10 @@ randomButton.mousePressed(randomizeCheckboxes);
 randomButton.parent(document.body);
 randomButton.style('position', 'fixed');
 randomButton.style('bottom', '20px');
-randomButton.style('right', '120px');
+
+randomButton.style('left', '50%');
+randomButton.style('transform', 'translateX(-50%) translateX(70px)');
+
 randomButton.style('padding', '10px 20px');
 randomButton.style('margin', '5px');
 randomButton.style('font-size', '16px');
@@ -40,7 +43,10 @@ clearButton.mousePressed(clearCheckboxes);
 clearButton.parent(document.body);
 clearButton.style('position', 'fixed');
 clearButton.style('bottom', '20px');
-clearButton.style('right', '250px');
+  
+clearButton.style('left', '50%');
+clearButton.style('transform', 'translateX(-50%) translateX(-70px)');
+  
 clearButton.style('padding', '10px 20px');
 clearButton.style('margin', '5px');
 clearButton.style('font-size', '16px');
